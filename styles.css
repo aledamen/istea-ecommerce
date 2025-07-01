@@ -1,0 +1,101 @@
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: #212529;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+#productList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+  border-radius: 0.5rem;
+  transition: transform 0.15s ease-in-out;
+  cursor: pointer;
+  background-color: white;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgb(0 0 0 / 0.15);
+}
+
+.card img {
+  object-fit: contain;
+  height: 180px;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  min-height: 2.4rem;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.quantity-controls button {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offcanvas-body {
+  padding-bottom: 0.5rem;
+}
+
+.list-group-item {
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.5);
+  outline: none;
+}
+
+@media (max-width: 576px) {
+  #productList {
+    grid-template-columns: 1fr;
+  }
+}
